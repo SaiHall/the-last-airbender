@@ -7,4 +7,10 @@ RSpec.describe AvatarFacade do
     expect(characters[0]).to be_an_instance_of(Character)
     expect(characters.length).to eq(25)
   end
+
+  it 'returns the number of search results' do
+    number = AvatarFacade.create_search_number("Fire+Nation")
+
+    expect(number).to eq(97)
+  end
 end
