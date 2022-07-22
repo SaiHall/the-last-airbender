@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
   def index
     @characters = AvatarFacade.create_affiliation_characters(nation_params)
+    @count = AvatarFacade.create_search_number(nation_params)
   end
 
   private
