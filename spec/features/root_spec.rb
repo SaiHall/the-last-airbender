@@ -7,6 +7,6 @@ RSpec.describe 'Landing Page', type: :feature do
     select 'Fire Nation', from: :nation
     click_button('Search For Members')
 
-    expect(page).to have_current_path('/search')
+    expect(page).to have_current_path("/search?utf8=%E2%9C%93&nation=fire_nation&commit=Search+For+Members")
   end
 end
