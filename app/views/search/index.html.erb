@@ -5,13 +5,21 @@
     <img src="<%= character.photo %>">
   <% end %>
   <h4><%= character.name %><h4>
-  <p>Allies:</p>
-  <% character.allies.each do |ally| %>
-    <li><%= ally %></li>
+  <p>Allies: </p>
+  <% if character.allies == [] %>
+    <li><%= "None" %></li>
+  <% else %>
+    <% character.allies.each do |ally| %>
+      <li><%= ally %></li>
+    <% end %>
   <% end %>
-  <p>Enemies:</p>
-  <% character.enemies.each do |enemy| %>
-    <li><%= enemy %></li>
+  <p>Enemies: </p>
+  <% if character.enemies == [] %>
+    <li><%= "None" %></li>
+  <% else %>
+    <% character.enemies.each do |enemy| %>
+      <li><%= enemy %></li>
+    <% end %>
   <% end %>
   <p>Affiliations: <%= character.affiliations %></p>
 </div>

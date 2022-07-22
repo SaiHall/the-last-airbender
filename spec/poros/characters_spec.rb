@@ -39,4 +39,19 @@ RSpec.describe Character do
     ty = Character.new(data)
     expect(ty.photo).to eq("https://vignette.wikia.nocookie.net/avatar/images/a/a5/Circus_master.png/revision/latest?cb=20130706153819")
   end
+
+  # it 'will show none if a character has no enemies or allies' do
+  #   data = {
+  #       "_id": "5cf5679a915ecad153ab691d",
+  #       "allies": [],
+  #       "enemies": [],
+  #       "photoUrl": "https://vignette.wikia.nocookie.net/avatar/images/1/16/Ember_Island_Players.png/revision/latest?cb=20130722113209",
+  #       "name": "Ember Island Players",
+  #       "affiliation": "Fire Nation"
+  #   }
+  #
+  #   ember = Character.new(data)
+  #   expect(ember.enemies).to eq("None")
+  #   expect(ember.allies).to eq("None")
+  # end
 end

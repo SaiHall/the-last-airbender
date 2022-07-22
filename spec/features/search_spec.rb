@@ -22,4 +22,12 @@ RSpec.describe 'Search Result Page', type: :feature do
       expect(page).to have_content("Fire Nation Navy")
     end
   end
+
+  it 'will show none if character has no enemies or allies' do
+    save_and_open_page
+    within page.all('.character')[22] do
+      expect(page).to have_content("Ember Island Players")
+      expect(page).to have_content("None")
+    end
+  end
 end
