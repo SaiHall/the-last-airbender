@@ -20,5 +20,23 @@ RSpec.describe Character do
     expect(chan.allies).to eq(["Ozai"])
     expect(chan.enemies).to eq(["Earth Kingdom"])
     expect(chan.affiliations).to eq("Fire Nation Navy")
+    expect(chan.photo).to eq(nil)
+  end
+  it 'will return a photo url if one exists' do
+    data = {
+        "_id": "5cf5679a915ecad153ab6906",
+        "allies": [
+            "Ty Lee"
+        ],
+        "enemies": [
+            "Appa"
+        ],
+        "photoUrl": "https://vignette.wikia.nocookie.net/avatar/images/a/a5/Circus_master.png/revision/latest?cb=20130706153819",
+        "name": "Circus master",
+        "affiliation": "Fire Nation circus"
+    }
+
+    ty = Character.new(data)
+    expect(ty.photo).to eq("https://vignette.wikia.nocookie.net/avatar/images/a/a5/Circus_master.png/revision/latest?cb=20130706153819")
   end
 end
